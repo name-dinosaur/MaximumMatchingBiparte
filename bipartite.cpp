@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <ctime>
 #define MAX 101
 
 using namespace std;
@@ -36,15 +37,19 @@ int main() {
     vtx[4].push_back(3);
     vtx[5].push_back(2);
     int cnt = 0; //successful matchings
+    clock_t start_time = clock();
     for (int i = 1; i <= n; i++) {
         fill(done, done + MAX, false);
         if (dfs(i)) cnt++;
     }
+    clock_t end_time = clock();
+    double elapsed_time = double(end_time - start_time) * 1000.0 / CLOCKS_PER_SEC;
     cout << cnt << " matches successful\n";
     for (int i = 1; i < MAX; i++) {
         if (slt[i] != 0) {
             cout << slt[i] << " => " << i << "\n";
         }
     }
+    cout << "Elapsed time: " << elapsed_time << " milliseconds\n";
     return 0;
 }
