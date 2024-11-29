@@ -1,3 +1,4 @@
+import time
 #map graph to people and jobs
 persons = ['Person 0', 'Person 1', 'Person 2', 'Person 3', 'Person 4', 'Person 5']
 jobs = ['Job 0', 'Job 1', 'Job 2', 'Job 3', 'Job 4', 'Job 5']
@@ -43,7 +44,14 @@ def max_match():
 
     return result
 
-print(f"Maximum number of applicants that can get a job is {max_match()}\n")
+#start timer
+start_time = time.perf_counter()
+results = max_match()
+end_time = time.perf_counter()
+elapsed_time = end_time - start_time
+print(f"Time taken to sort {elapsed_time:.15f} seconds")
+
+print(f"Maximum number of applicants that can get a job is {results}\n")
 
 for job, person in enumerate(assigned):
     if person != -1:
