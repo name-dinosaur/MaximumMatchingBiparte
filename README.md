@@ -17,8 +17,12 @@ Space and Time Complexity
 DFS checks all vertices and edges for matches, so the time and space complexity will both be O(V+E). 
 
 References Java
+GeeksforGeeks. (n.d.). Maximum bipartite matching. Retrieved from https://www.geeksforgeeks.org/maximum-bipartite-matching/
+
+Javatpoint. (n.d.). DAA - Maximum bipartite matching. Retrieved from https://www.javatpoint.com/daa-maximum-bipartite-matching
+
 
 # Members
 Sunny Pak - C++ implementation, report (Abstract, Introduction)
 Diego Mackay - Python Implementation, report
-Karan - 
+Karan - Java Implementation, report
